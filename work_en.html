@@ -1,0 +1,43 @@
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alexander's Work</title>
+    <link rel="stylesheet" href="commonStyles.css">
+    <style>
+        .name { text-align: center; color: #E7F6F2; font-size: 40; position: relative; top: 5% } 
+        .row { position: absolute; top: 30%; width: 100%; }
+        
+        /* Desktop-Specific Styles (Mobile First!) */
+        @media (min-width: 768px) {
+            /* Correct Margins for Desktop */
+            .name { top: 10% }
+            .row { top: 45% }
+            /* Align Assets Horizontally Instead of Vertically */
+            .column { float: left; width: 33.3333%; align-content: center; transition: top 1s; }
+            .row { width: 100%; position: absolute; align-content: center; }
+            
+            /* Change 'akira' to kanji on hover */
+            mname span {visibility: visible; transition: 0.3s; transition-delay: display 0.3s;}
+            mname:hover span { display: none; transition: opacity 0; }
+            mname:hover:before { white-space: break-spaces; content: "   明   "; font-size: 36; }
+        }
+    </style>
+ </head>
+ <body>
+     <!-- Wave Footer -->
+     <img
+        class="footer"
+        src="wave.svg"
+        alt="wave graphic"
+        width=100% 
+    />    
+     
+     <!-- Language Change SVG -->
+     <a href="index_se.html"><img 
+        class="langButton"
+        src="flag/se.svg"
+        alt="Change Language"
+        ></a>
+ </body>
+</html>
