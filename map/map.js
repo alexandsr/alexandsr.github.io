@@ -16,7 +16,7 @@ L.geoJson(data, {
         switch (feature.properties.status) {
             case 'y': return {color: "#1C5A71", "weight": 2, "opacity": 0.65 };
             case 'n':   return { "color": "#fff", "weight": 0, "opacity": 0.00 };
-            case 'l':   return { "color": "#182434", "weight": 2, "opacity": 0.65 };
+            case 'l':   return { "color": "#325A63", "weight": 2, "opacity": 0.65 };
         }
 }}).addTo(map);});
 
@@ -26,6 +26,6 @@ L.geoJson(data, {
         switch (feature.properties.status) {
             case 'y': return {color: "#1C5A71", "weight": 2, "opacity": 0.65 };
             case 'n':   return { "color": "#fff", "weight": 0, "opacity": 0.00 };
-            case 'l':   return { "color": "#182434", "weight": 2, "opacity": 0.65 };
+            case 'l':   return { "color": "#325A63", "weight": 2, "opacity": 0.65 };
         }
 }}).addTo(map);});
