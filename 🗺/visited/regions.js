@@ -10,7 +10,7 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 
 // Add the GeoJSON data
 // loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
-$.getJSON("northam.geojson",function(data){
+$.getJSON("visited/northAmRegions.geojson",function(data){
 L.geoJson(data, {
     style: function(feature) {
         switch (feature.properties.status) {
@@ -20,7 +20,7 @@ L.geoJson(data, {
         }
 }}).addTo(map);});
 
-$.getJSON("europe.geojson",function(data){
+$.getJSON("visited/europeRegions.geojson",function(data){
 L.geoJson(data, {
     style: function(feature) {
         switch (feature.properties.status) {
