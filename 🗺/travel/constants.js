@@ -22,7 +22,7 @@
     const Reykjavik = {lat: 64.1466, lng: -21.9426};
 
     // Airports
-    const SFO = {lat: 37.6213, lng: 122.3790}; // San Fransisco
+    const SFO = {lat: 37.6213, lng: -122.3790}; // San Fransisco
     const MSP = {lat: 44.8848, lng: -93.2223}; // Minneapolis
     const AMS = {lat: 52.3105, lng: 4.7683}; // Amsterdam
     const ARN = {lat: 59.6494, lng: 17.9343}; // Stockholm 
