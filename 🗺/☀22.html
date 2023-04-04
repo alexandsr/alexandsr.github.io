@@ -27,18 +27,18 @@
         $.getJSON("travel/itasca2022.geojson",function(data){
         L.geoJson(data, {
             style: function(feature) {
-                return {color: "#1C5A71", "weight": 4, "opacity": 0.65 };
+                return car;
                 }
         }).addTo(map);});
         $.getJSON("travel/harmonyMN2022.geojson",function(data){
         L.geoJson(data, {
             style: function(feature) {
-                return {color: "#1C5A71", "weight": 4, "opacity": 0.65 };
+                return car;
                 }        }).addTo(map);});
         $.getJSON("travel/northShore2022.geojson",function(data){
         L.geoJson(data, {
             style: function(feature) {
-                return {color: "#1C5A71", "weight": 4, "opacity": 0.65 };
+                return car;
                 }
             }).addTo(map);});
     </script>

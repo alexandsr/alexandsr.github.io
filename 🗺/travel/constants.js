@@ -63,7 +63,11 @@ const boat = {
     opacity: 1,
     color: '#320E3B',
 };
-
+const car = {
+    weight: 4,
+    opacity: 1,
+    color: '#111111',
+};
 // Initialize the Leaflet map
 const map = L.map('map').setView([30, 10], 3); 
 
