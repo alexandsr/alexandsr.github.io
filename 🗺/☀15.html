@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☀ 2023 Resa</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="mapstyles.css">
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+   
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+    <!-- Leaflet.Geodesic -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.geodesic"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="travel/constants.js"></script>
+    <script>
+        const s15step1 = new L.Geodesic([ARN, Paris], air).addTo(map);
+        const s15step2 = new L.Geodesic([Paris, SFO], air).addTo(map);
+        const s15step3 = new L.polyline([SFO, SantaCruz], car).addTo(map);
+    </script>
+</body>
+</html>

@@ -16,6 +16,7 @@
     const Leksand = {lat: 60.7304, lng: 14.9980};
     const Abisko = {lat: 68.3495, lng: 18.8312};
 
+    const Paris = {lat: 48.8566, lng: 2.3522};
     const Köpenhamn = {lat: 55.6761, lng: 12.5683};
     const Oslo = {lat: 59.9139, lng: 10.7522};
     const Reykjavik = {lat: 64.1466, lng: -21.9426};
