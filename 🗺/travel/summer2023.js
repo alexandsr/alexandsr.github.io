@@ -8,14 +8,6 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 	maxZoom: 22
 }).addTo(map);
 
-const flight = {
-    weight: 4,
-    opacity: 0.8,
-    color: '#E0FFFF',
-};
-const MSP = {lat: 44.8848, lng: -93.2223};
-const AMS = {lat: 52.3105, lng: 4.7683};
-const ARN = {lat: 59.6494, lng: 17.9343};
-const s23step1 = new L.Geodesic([MSP, AMS], flight).addTo(map);
-const s23step2 = new L.Geodesic([AMS, ARN], flight).addTo(map);
+const s23step1 = new L.Geodesic([MSP, AMS], air).addTo(map);
+const s23step2 = new L.Geodesic([AMS, ARN], air).addTo(map);
 
