@@ -1,3 +1,4 @@
+var features
 // Initialize the Leaflet map
 const map = L.map('map', { zoomControl: false }).setView([30, 10], 3); 
 
@@ -31,5 +32,8 @@ L.geoJson(data, {
 }}).addTo(features);});
 features.addTo(map)
 
-var bounds = features.getBounds();
-map.fitBounds(bounds); 
+function fitBounds() {
+    var bounds = features.getBounds();
+    map.fitBounds(bounds);
+    console.log("Finished Fitting Map Bounds to Map Plots")
+}

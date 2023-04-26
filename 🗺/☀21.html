@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     
 </head>
-<body>
+<body onload="fitBounds()">
     <div id="map"></div>
     <script src="travel/constants.js"></script>
     <script>
@@ -35,8 +35,6 @@
                 }
         }).addTo(lines);});
         lines.addTo(map)
-        var bounds = lines.getBounds();
-        map.fitBounds(bounds); 
     </script>
 </body>
 </html>

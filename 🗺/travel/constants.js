@@ -79,3 +79,10 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 	apikey: '7d8e9f8db9ff49f5a80ad2b62eda4470',
 	maxZoom: 22
 }).addTo(map);
+
+// Fit Bounds
+function fitBounds() {
+    var bounds = lines.getBounds();
+    map.fitBounds(bounds);
+    console.log("Finished Fitting Map Bounds to Map Plots")
+}

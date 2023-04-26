@@ -20,7 +20,7 @@
     <!-- Leaflet.Geodesic -->
     <script src="https://cdn.jsdelivr.net/npm/leaflet.geodesic"></script>
 </head>
-<body>
+<body onload="fitBounds()" onload="fitBounds()">
     <div id="map"></div>
     <script src="travel/constants.js"></script>
     <script>
@@ -36,8 +36,6 @@
                 return car;
                 }        }).addTo(lines);});
         lines.addTo(map)
-        var bounds = lines.getBounds();
-        map.fitBounds(bounds); 
     </script>
 </body>
 </html>

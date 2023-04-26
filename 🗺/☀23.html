@@ -20,7 +20,7 @@
     <!-- Leaflet.Geodesic -->
     <script src="https://cdn.jsdelivr.net/npm/leaflet.geodesic"></script>
 </head>
-<body>
+<body onload="fitBounds()">
     <div id="map"></div>
     <script src="travel/constants.js"></script>
     <script>
@@ -28,8 +28,6 @@
         const s23step2 = new L.Geodesic([AMS, ARN], air).addTo(lines);
         
         lines.addTo(map)
-        var bounds = lines.getBounds();
-        map.fitBounds(bounds); 
     </script>
 </body>
 </html>
