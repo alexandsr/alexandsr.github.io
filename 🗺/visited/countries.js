@@ -20,5 +20,6 @@ L.geoJson(data, {
         }
 }}).addTo(features);});
 features.addTo(map)
+
 var bounds = features.getBounds();
 map.fitBounds(bounds); 
