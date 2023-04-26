@@ -8,6 +8,7 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 	maxZoom: 22
 }).addTo(map);
 
+var features = new L.featureGroup
 // Add the GeoJSON data
 $.getJSON("visited/countries.geojson",function(data){
 L.geoJson(data, {
@@ -17,4 +18,7 @@ L.geoJson(data, {
             case 'n':   return { "color": "#fff", "weight": 0, "opacity": 0.00 };
             case 'l':   return { "color": "#1B3035", "weight": 2, "opacity": 0.65 };
         }
-}}).addTo(map);});
+}}).addTo(features);});
+features.addTo(map)
+var bounds = features.getBounds();
+map.fitBounds(features); 
