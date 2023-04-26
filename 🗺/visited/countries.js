@@ -1,5 +1,5 @@
 // Initialize the Leaflet map
-const map = L.map('map').setView([30, 10], 3); 
+const map = L.map('map', { zoomControl: false }).setView([30, 10], 3); 
 
 // Add a base map layer
 L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey=7d8e9f8db9ff49f5a80ad2b62eda4470 ', {
@@ -21,4 +21,4 @@ L.geoJson(data, {
 }}).addTo(features);});
 features.addTo(map)
 var bounds = features.getBounds();
-map.fitBounds(features); 
+map.fitBounds(bounds); 
