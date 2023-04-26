@@ -22,14 +22,15 @@
     <div id="map"></div>
     <script src="travel/constants.js"></script>
     <script>
-        $.getJSON("travel/internationalfalls2021.json",function(data){
+        $.getJSON("travel/internationalFalls2021.json",function(data){
         L.geoJson(data, {
             style: function(feature) {
                 return car;
                 }
         }).addTo(lines);});
         lines.addTo(map)
-        map.fitBounds(lines.getBounds().pad(0.5)); 
+        var bounds = lines.getBounds();
+        map.fitBounds(bounds); 
     </script>
 </body>
 </html>
