@@ -29,12 +29,14 @@
             style: function(feature) {
                 return car;
                 }
-        }).addTo(map);});
+        }).addTo(lines);});
         $.getJSON("travel/harmonyMN2022.geojson",function(data){
         L.geoJson(data, {
             style: function(feature) {
                 return car;
-                }        }).addTo(map);});
+                }        }).addTo(lines);});
+        lines.addTo(map)
+        map.fitBounds(lines.getBounds().pad(0.5)); 
     </script>
 </body>
 </html>

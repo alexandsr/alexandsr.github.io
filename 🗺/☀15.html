@@ -24,9 +24,11 @@
     <div id="map"></div>
     <script src="travel/constants.js"></script>
     <script>
-        const s15step1 = new L.Geodesic([ARN, Paris], air).addTo(map);
-        const s15step2 = new L.Geodesic([Paris, SFO], air).addTo(map);
-        const s15step3 = new L.polyline([SFO, SantaCruz], car).addTo(map);
+        const s15step1 = new L.Geodesic([ARN, Paris], air).addTo(lines);
+        const s15step2 = new L.Geodesic([Paris, SFO], air).addTo(lines);
+        const s15step3 = new L.polyline([SFO, SantaCruz], car).addTo(lines);
+        lines.addTo(map)
+        map.fitBounds(lines.getBounds().pad(0.5)); 
     </script>
 </body>
 </html>

@@ -26,7 +26,9 @@
             style: function(feature) {
                 return car;
                 }
-            }).addTo(map);});
+            }).addTo(lines);});
+        lines.addTo(map)
+        map.fitBounds(lines.getBounds().pad(0.5)); 
     </script>
 </body>
 </html>
