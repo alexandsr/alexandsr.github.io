@@ -31,42 +31,42 @@
 // Modes
 const air = {
     weight: 4,
-    opacity: 1,
+    opacity: 0.9,
     color: '#004854',
 };
 const train = {
     weight: 4,
-    opacity: 1,
+    opacity: 0.9,
     color: '#BB0A21',
 };
 const bike = {
     weight: 4,
-    opacity: 1,
+    opacity: 0.9,
     color: '#F17300',
 };
 const foot = {
     weight: 4,
-    opacity: 1,
+    opacity: 0.9,
     color: '#0EB454',
 };
 const subway = {
     weight: 4,
-    opacity: 1,
+    opacity: 0.9,
     color: '#DE2110',
 };
 const bus = {
     weight: 4,
-    opacity: 1,
+    opacity: 0.9,
     color: '#BF4B21',
 };
 const boat = {
     weight: 4,
-    opacity: 1,
-    color: '#320E3B',
+    opacity: 0.9,
+    color: '#522E4B',
 };
 const car = {
     weight: 4,
-    opacity: 1,
+    opacity: 0.9,
     color: '#111111',
 };
 // Initialize the Leaflet map
