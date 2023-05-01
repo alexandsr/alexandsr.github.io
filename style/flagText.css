@@ -1,0 +1,39 @@
+#sv {
+  background: url("../../flag/se.svg");
+   background-size: contain;
+  background-position: center center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(240, 255, 255, 0.35);;
+  background-clip: text;
+  color: rgba(240, 255, 255, 0.25);
+}
+
+#en {
+    background: url("../../flag/en.svg");
+    background-size: contain;
+    background-position: center center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(240, 255, 255, 0.25);;
+    background-clip: text;
+    color: rgba(240, 255, 255, 0.25);
+  }
+
+#de {
+    background: url("../../flag/de.svg");
+    background-size: contain;
+    background-position: center center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(240, 255, 255, 0.35);;
+    background-clip: text;
+    color: rgba(240, 255, 255, 0.25);
+  }
+
+  #uz {
+    background: url("../../flag/uz.svg");
+    background-size: contain;
+    background-position: center center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(240, 255, 255, 0.25);;
+    background-clip: text;
+    color: rgba(240, 255, 255, 0.15);
+  }

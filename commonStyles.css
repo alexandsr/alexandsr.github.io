@@ -68,7 +68,7 @@ body {
 
 
 /* Text + Link Styling */        
-.content { font-size: 70 }
+.content { font-size: 60px }
 
 .content w:nth-child(1) { color: transparent; position: absolute; -webkit-text-stroke: 1px azure;  }
 
@@ -87,9 +87,9 @@ a { text-decoration:none; color: inherit; }
 /* Flag Icon Style Info */
 .langButton {
     position: absolute;
-    bottom: 2%;
-    right: 4%;
-    width: 6%
+    bottom: 1vh;
+    right: 1vh;
+    width: 4vw
 }
 
 /* Desktop-Only Styles */
@@ -98,3 +98,4 @@ a { text-decoration:none; color: inherit; }
         width: 2%;
         right: 1.3%
     }
+}
