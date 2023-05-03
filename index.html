@@ -5,23 +5,24 @@
     <title>Alexander's Homepage</title>
     <link rel="stylesheet" href="commonStyles.css">
     <style>
-        .name { text-align: center; color: #E7F6F2; font-size: 5vw; position: relative; top: 5% } 
+        .name { text-align: center; color: #E7F6F2; font-size: 40px; position: relative; top: 5% } 
         .row { position: absolute; top: 30%; width: 100%; }
      
         /* Desktop-Specific Styles (Mobile First!) */
         @media (min-width: 768px) {
             /* Correct Margins for Desktop */
             .name { top: 10% }
+            h1 {
+                transition: 0.75s ease;
+            }
+            h1:hover {     
+                letter-spacing: 0.4rem;
+            }
             .row { top: 45% }
             /* Align Assets Horizontally Instead of Vertically */
             .column { float: left; width: 33.3%; align-content: center; transition: top 1s; }
             .row { width: 100%; position: absolute; align-content: center; }
-            
-            /* Change 'akira' to kanji on hover */
-            mname span {visibility: visible; transition: 0.3s; transition-delay: display 0.3s;}
-            mname:hover span { display: none; transition: opacity 0; }
-            mname:hover:before { white-space: break-spaces; content: "   明   "; font-size: 36; }
-        }
+                    }
         </style>
  </head>
  <body>
@@ -32,11 +33,13 @@
         alt="wave graphic"
         width=100% 
     />    
-     
+     <br>
     <!-- Name -->
-    <fname class="name">alexander </fname>
-    <mname class="name"><span>akira </span></mname>
+    <h1>
+    <fname class="name">alexander </fname><br class="nameBreak">
+    <mname class="name"><span>akira </span></mname><br class="nameBreak">
     <lname class="name">weimer</lname>
+</h1>
      
     <!-- Links -->
     <div class="content" >  
