@@ -85,14 +85,13 @@ body {
 
 
 /* Text + Link Styling */        
-.content { font-size: 60px }
+.content { font-size: 60px;}
 
 .content w:nth-child(1) { z-index: 9; color: transparent; position: absolute; -webkit-text-stroke: 1px azure; }
-.content w:nth-child(1):hover ~ w:nth-child(2) a { animation: hoverAnimation 0.15s; }
 
 .content w:nth-child(2) { color: azure; animation: animation 6s ease-in-out infinite;}
 
-a { text-decoration:none; color: inherit; }
+a { text-decoration:none; color: inherit;  cursor: pointer; }
 
 
 

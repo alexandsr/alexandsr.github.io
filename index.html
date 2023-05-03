@@ -6,14 +6,16 @@
     <link rel="stylesheet" href="commonStyles.css">
     <script src="style/pageTransition.js"></script>
     <style>
-        .name { text-align: center; color: #E7F6F2; font-size: 40px; position: relative; top: 5% } 
+        .name { text-align: center; color: #E7F6F2; font-size: 40px; position: relative; top: 5%; cursor: default; } 
         .row { position: absolute; top: 30%; width: 100%; }
         .content w:nth-child(1):hover ~ w:nth-child(2)  { animation: hoverAnimation 0.15s; }
         h1:hover {     
             letter-spacing: 0.4rem;
+            cursor: pointer;
         }
         h1 {
             transition: 0.75s ease;
+            cursor: pointer;
         }
         #squeegee {
             width: 100vw; height: 0vh;
@@ -29,7 +31,7 @@
             /* Align Assets Horizontally Instead of Vertically */
             .column { float: left; width: 33.3%; align-content: center; transition: top 1s; }
             .row { width: 100%; position: absolute; align-content: center; }
-                    }
+        }
         
         </style>
  </head>
@@ -72,6 +74,6 @@
         src="flag/se.svg"
         alt="Change Language"
         ></a>
-    <img src="assets/squeegee.png" id="squeegee" style="">
+    <img src="assets/squeegee.png" id="squeegee">
  </body>
 </html>
