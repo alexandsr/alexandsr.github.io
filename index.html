@@ -2,27 +2,35 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alexander's Homepage</title>
+    <title>alexander weimer</title>
     <link rel="stylesheet" href="commonStyles.css">
+    <script src="style/pageTransition.js"></script>
     <style>
         .name { text-align: center; color: #E7F6F2; font-size: 40px; position: relative; top: 5% } 
         .row { position: absolute; top: 30%; width: 100%; }
-     
+        .content w:nth-child(1):hover ~ w:nth-child(2)  { animation: hoverAnimation 0.15s; }
+        h1:hover {     
+            letter-spacing: 0.4rem;
+        }
+        h1 {
+            transition: 0.75s ease;
+        }
+        #squeegee {
+            width: 100vw; height: 0vh;
+            position: absolute; left: 0; bottom: 0; z-index: 10;
+            transition: 0.5s ease;
+        }
+
         /* Desktop-Specific Styles (Mobile First!) */
         @media (min-width: 768px) {
             /* Correct Margins for Desktop */
             .name { top: 10% }
-            h1 {
-                transition: 0.75s ease;
-            }
-            h1:hover {     
-                letter-spacing: 0.4rem;
-            }
             .row { top: 45% }
             /* Align Assets Horizontally Instead of Vertically */
             .column { float: left; width: 33.3%; align-content: center; transition: top 1s; }
             .row { width: 100%; position: absolute; align-content: center; }
                     }
+        
         </style>
  </head>
  <body>
@@ -34,7 +42,6 @@
         width=100% 
     />    
      <br>
-    <!-- Name -->
     <h1>
     <fname class="name">alexander </fname><br class="nameBreak">
     <mname class="name"><span>akira </span></mname><br class="nameBreak">
@@ -45,16 +52,16 @@
     <div class="content" >  
         <div class = "row">
             <div class="column l">
-                <w class = "wavy"><a href="🛈">about</a></w>
-                <w class = "wavy"><a href="🛈">about</a></w>
+                <w class = "wavy"><a onclick=toInfo()>about</a></w>
+                <w class = "wavy"><a onclick=toInfo()>about</a></w>
             </div>        
             <div class="column c">
-                <w class = "wavy"><a href="⌨">projects</a></w>
-                <w class = "wavy"><a href="⌨">projects</a></w>      
+                <w class = "wavy"><a onclick=toProjects()>projects</a></w>
+                <w class = "wavy"><a onclick=toProjects()>projects</a></w>      
             </div>
             <div class="column r">
-                <w class = "wavy"><a href="🗐">résumé</a></w>
-                <w class = "wavy"><a href="🗐">résumé</a></w>
+                <w class = "wavy"><a onclick=toResume()>résumé</a></w>
+                <w class = "wavy"><a onclick=toResume()>résumé</a></w>
             </div>     
         </div>
      </div>
@@ -65,5 +72,6 @@
         src="flag/se.svg"
         alt="Change Language"
         ></a>
+    <img src="assets/squeegee.png" id="squeegee" style="">
  </body>
 </html>
