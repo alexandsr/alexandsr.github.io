@@ -6,16 +6,13 @@
     <link rel="stylesheet" href="commonStyles.css">
     <script src="style/pageTransition.js"></script>
     <style>
-        .name { text-align: center; color: #E7F6F2; font-size: 40px; position: relative; top: 5%; cursor: default; } 
+        .name { text-align: center; color: #E7F6F2; font-size: 40px; position: relative; top: 5%; cursor: default;  transition: ease-in-out 5s;           } 
         .row { position: absolute; top: 30%; width: 100%; }
-        .content w:nth-child(1):hover ~ w:nth-child(2)  { animation: hoverAnimation 0.15s; }
-        h1:hover {     
-            letter-spacing: 0.4rem;
-            cursor: pointer;
-        }
+        .content w:nth-child(1):hover {  letter-spacing: 0.4rem;  cursor: pointer;}
+        .content w:nth-child(1):hover ~ w:nth-child(2)  {  letter-spacing: 0.4rem; cursor: pointer; }
         h1 {
-            transition: 0.75s ease;
             cursor: pointer;
+            transition: ease-in-out 3s;
         }
         #squeegee {
             width: 100vw; height: 0vh;
@@ -44,11 +41,11 @@
         width=100% 
     />    
      <br>
-    <h1>
-    <fname class="name">alexander </fname><br class="nameBreak">
-    <mname class="name"><span>akira </span></mname><br class="nameBreak">
-    <lname class="name">weimer</lname>
-</h1>
+    <h1 id="h1">
+    <fname class="name" id="name1">alexander</fname> <br class="nameBreak">
+    <mname class="name" id="name2">akira</mname> <br class="nameBreak">
+    <lname class="name" id="name3">weimer</lname>
+     </h1>
      
     <!-- Links -->
     <div class="content" >  

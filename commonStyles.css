@@ -53,7 +53,7 @@
 @keyframes hoverAnimation {
     
 0% {
-        clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 52%, 100% 50%, 100% 100%, 0% 100%);
 
     }
     100% {
@@ -85,15 +85,13 @@ body {
 
 
 /* Text + Link Styling */        
-.content { font-size: 60px;}
+.content { font-size: 60px; transition: 0.5s ease-in-out }
 
-.content w:nth-child(1) { z-index: 9; color: transparent; position: absolute; -webkit-text-stroke: 1px azure; }
+.content w:nth-child(1) { z-index: 9; color: transparent; position: absolute; -webkit-text-stroke: 1px azure; transition: 0.5s ease-in-out  }
 
-.content w:nth-child(2) { color: azure; animation: animation 6s ease-in-out infinite;}
+.content w:nth-child(2) { color: azure; animation: animation 6s ease-in-out infinite; transition: 0.5s ease-in-out }
 
 a { text-decoration:none; color: inherit;  cursor: pointer; }
-
-
 
 /* Wave Footer Style Info */
 .footer {
@@ -118,4 +116,41 @@ a { text-decoration:none; color: inherit;  cursor: pointer; }
     .nameBreak {
         display: none;
     }
+}
+
+#a, #b, #c {
+    transition: 10s ease-in;
+}
+
+
+@keyframes floating0 {
+    0% { transform: translate( 0px, 0px ); }
+    25%  { transform: translate( -40px, -60px ); }
+    50%  { transform: translate( -80px, -10px); }
+    100%   { transform: translate(0px, 0px); }   
+}
+@keyframes floating1 {
+    0% { transform: translate( 0px, 0px ); }
+    25%  { transform: translate( -50px, -80px ); }
+    50%  { transform: translate( -80px, -20px); }
+    100%   { transform: translate(-0px, -0px); }   
+}
+@keyframes floating2 {
+    0% { transform: translate( 0px, 0px ); }
+    25%  { transform: translate( -75px, -80px ); }
+    50%  { transform: translate( -60px, -35px); }
+    100%   { transform: translate(-0px, -0px); }   
+}
+
+#name1 {
+    animation: floating0 3.91s ease-in-out infinite;
+}
+
+#name2 {
+    animation: floating1 5.24s ease-in-out infinite;
+
+}
+
+#name3 {
+    animation: floating2 4.5s ease-in-out infinite;
 }
