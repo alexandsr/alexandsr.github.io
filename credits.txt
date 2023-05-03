@@ -4,3 +4,5 @@ Water-Wave Text Effect Copyright (c) 2023 by Oluwakemi (https://codepen.io/techg
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 Background Wave Effect Created Via Heikei.app (https://app.haikei.app/)
+
+Page transition effect stolen from dris elamri @ dris.llc.
