@@ -5,4 +5,4 @@ The above copyright notice and this permission notice shall be included in all c
 
 Background Footer Effect Created Via Heikei.app (https://app.haikei.app/)
 
-Page transition effect stolen from dris elamri @ dris.llc.
+Page transition stolen from dris elamri @ dris.llc.
