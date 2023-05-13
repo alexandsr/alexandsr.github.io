@@ -74,7 +74,7 @@ const map = L.map('map', { zoomControl: false }).setView([30, 10], 3);
 var lines = new L.featureGroup
 
 var schoolIcon = L.icon({
-    iconUrl: 'byggnad.png',
+    iconUrl: 'travel/images/byggnad.png',
     shadowUrl: 'byggnad.png',
 
     iconSize:     [27, 26], // size of the icon
