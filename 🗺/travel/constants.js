@@ -1,3 +1,6 @@
+
+
+
 // Locations
     // Cities/Towns
     const Minneapolis = {lat: 44.9778, lng: -93.2650};
@@ -76,12 +79,11 @@ var lines = new L.featureGroup
 var schoolIcon = L.icon({
     iconUrl: 'travel/images/byggnad.png',
     shadowUrl: 'byggnad.png',
-
     iconSize:     [27, 26], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
     iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
     shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, 10] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [0, -15] // point from which the popup should open relative to the iconAnchor
 });
 
 // Add a base map layer
