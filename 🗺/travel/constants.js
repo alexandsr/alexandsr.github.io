@@ -78,12 +78,32 @@ var lines = new L.featureGroup
 
 var schoolIcon = L.icon({
     iconUrl: 'travel/images/byggnad.png',
-    shadowUrl: 'byggnad.png',
+    shadowUrl: '',
     iconSize:     [27, 26], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
     iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
     shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -15] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+});
+
+var hostelIcon = L.icon({
+    iconUrl: 'travel/images/hostel.png',
+    shadowUrl: '',
+    iconSize:     [27, 26], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+});
+
+var airportIcon = L.icon({
+    iconUrl: 'travel/images/airport.png',
+    shadowUrl: '',
+    iconSize:     [26, 26], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
 });
 
 // Add a base map layer
