@@ -2,7 +2,7 @@
 <body>
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<div id="sankey_multiple" style="width: 100%; height: 300px;"></div>
+<div id="sankey_multiple" style="width: 100%; height: 500px;"></div>
 
 <script type="text/javascript">
   google.charts.load("current", {packages:["sankey"]});
@@ -14,62 +14,38 @@
     data.addColumn('string', 'To');
     data.addColumn('number', 'Weight');
     data.addRows([
-       [ 'Brazil', 'Portugal', 5 ],
-       [ 'Brazil', 'France', 1 ],
-       [ 'Brazil', 'Spain', 1 ],
-       [ 'Brazil', 'England', 1 ],
-       [ 'Canada', 'Portugal', 1 ],
-       [ 'Canada', 'France', 5 ],
-       [ 'Canada', 'England', 1 ],
-       [ 'Mexico', 'Portugal', 1 ],
-       [ 'Mexico', 'France', 1 ],
-       [ 'Mexico', 'Spain', 5 ],
-       [ 'Mexico', 'England', 1 ],
-       [ 'USA', 'Portugal', 1 ],
-       [ 'USA', 'France', 1 ],
-       [ 'USA', 'Spain', 1 ],
-       [ 'USA', 'England', 5 ],
-       [ 'Portugal', 'Angola', 2 ],
-       [ 'Portugal', 'Senegal', 1 ],
-       [ 'Portugal', 'Morocco', 1 ],
-       [ 'Portugal', 'South Africa', 3 ],
-       [ 'France', 'Angola', 1 ],
-       [ 'France', 'Senegal', 3 ],
-       [ 'France', 'Mali', 3 ],
-       [ 'France', 'Morocco', 3 ],
-       [ 'France', 'South Africa', 1 ],
-       [ 'Spain', 'Senegal', 1 ],
-       [ 'Spain', 'Morocco', 3 ],
-       [ 'Spain', 'South Africa', 1 ],
-       [ 'England', 'Angola', 1 ],
-       [ 'England', 'Senegal', 1 ],
-       [ 'England', 'Morocco', 2 ],
-       [ 'England', 'South Africa', 7 ],
-       [ 'South Africa', 'China', 5 ],
-       [ 'South Africa', 'India', 1 ],
-       [ 'South Africa', 'Japan', 3 ],
-       [ 'Angola', 'China', 5 ],
-       [ 'Angola', 'India', 1 ],
-       [ 'Angola', 'Japan', 3 ],
-       [ 'Senegal', 'China', 5 ],
-       [ 'Senegal', 'India', 1 ],
-       [ 'Senegal', 'Japan', 3 ],
-       [ 'Mali', 'China', 5 ],
-       [ 'Mali', 'India', 1 ],
-       [ 'Mali', 'Japan', 3 ],
-       [ 'Morocco', 'China', 5 ],
-       [ 'Morocco', 'India', 1 ],
-       [ 'Morocco', 'Japan', 3 ]
+      [ 'Total Time', 'Home', 10.6 ],
+        [ 'Home', 'Sleep', 9 ],
+        [ 'Home', 'Morning', 1 ],
+          [ 'Morning', 'Showering', 0.25 ],
+          [ 'Morning', 'Dressing', 0.25 ],
+          [ 'Morning', 'Breakfast', 0.35 ],
+          [ 'Morning', 'Packing', 0.15 ],
+        [ 'Home', 'Chores', 0.6 ],
+          [ 'Chores', 'Dishes', 0.2 ],
+          [ 'Chores', 'Laundry', 0.1 ],
+          [ 'Chores', 'Cleaning', 0.3 ],
+      [ 'Total Time', 'School', 9.4 ],
+        [ 'School', 'Homework', 0.66 ],
+        [ 'School', 'Commute', 1.4 ],
+          [ 'Commute', 'Walking', 0.4 ],
+          [ 'Commute', 'Bus', 1 ],
+        [ 'School', 'In-Building', 7.33 ],
+          [ 'In-Building', 'Passing Time', 0.9 ],
+          [ 'In-Building', 'Lunch', 0.43 ],
+          [ 'In-Building', 'Instruction', 6 ],
     ]);
 
     var options = {
-      width: 600,
       sankey: {
-        node: { label: { fontName: 'Times-Roman',
-                         fontSize: 14,
-                         color: '#871b47',
+        iterations: 512,
+        node: { 
+          nodePadding: 15,
+          label: { fontName: 'Arial',
+                         fontSize: 15,
+                         color: '#1c2e4a',
                          bold: true,
-                         italic: true } } },
+                         italic: false } } },
     };
 
 
