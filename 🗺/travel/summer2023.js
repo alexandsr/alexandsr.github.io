@@ -8,6 +8,8 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 	maxZoom: 22
 }).addTo(map);
 
+
+
 const s23step1 = new L.Geodesic([MSP, AMS], air).addTo(map);
 const s23step2 = new L.Geodesic([AMS, ARN], air).addTo(map);
 
