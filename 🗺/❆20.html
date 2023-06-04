@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter 2020 Passport Renewal</title>
+    <meta name="description" content="This trip was made because I needed to renew my passport, with the most convenient place to do so being the Swedish consulate-general in New York.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link rel="stylesheet" href="mapstyles.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.geodesic"></script>
+    <style>
+        @font-face {
+            font-family: Trueno;
+            src: url(../font/trueno_round_bold.otf);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="fitBounds()">
+    <div id="map"></div>
+    <script src="travel/constants.js"></script>
+    <script>
+        // const abiskoParagraf = "Forskarmöten är Sveriges unga akademis sommarforskarskola. Här får man möta yngre, ledande forskare inom olika fält.<br>Forskarmöten anordnas i Abisko, i vacker fjällmiljö."
+        const s20flight = new L.Geodesic([MSP, NYC], air).addTo(lines);
+        
+        // L.marker([68.35461541662688, 18.815882295171267], {icon: schoolIcon}).bindPopup(`<span style='font-family: trueno'><h2 style='margin: 0; padding: 0;'><span style='color: #544595'>Forskarmöten i Abisko</span></h2><p>${abiskoParagraf}</p><img src="travel/images/abisko.jpg" width="260px" style="padding: 0; margin: 0;"/><h3><a href='https://www.sverigesungaakademi.se/2621.html' style='color: #544595'>Sveriges Unga Akademi</a></h3></span>`, {
+        //     maxWidth: 260
+        // }).addTo(map);
+        
+        // Flygplatser
+        L.marker([44.8848, -93.2223], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>MSP</h1><p>Minneapolis–Saint Paul International Airport</p>").addTo(map);
+        L.marker([40.7769, -73.8740], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>LGA</h1><p>LaGuardia Airport</p><i>East Elmhurst, Queens</i>").addTo(map);
+        
+        L.marker([-40.7535, -73.9699], {icon: hostelIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Swedish Consulate-General</h1><p>Swedish mission to the United States.</p>").addTo(map);
+
+        lines.addTo(map)
+        fitBounds()
+    </script>
+</body>
+</html>

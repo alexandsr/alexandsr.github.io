@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Falls Trip</title>
-
-    <!-- Leaflet CSS -->
+    <title>Windsor-Toronto-Niagara Trip</title>
+    <meta 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="mapstyles.css">
-
-    <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-   
-    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    
 </head>
 <body onload="fitBounds()">
     <div id="map"></div>
     <script src="travel/constants.js"></script>
     <script>
-        $.getJSON("travel/internationalFalls2021.geojson",function(data){
+        $.getJSON("travel/windsor-toronto2018.geojson",function(data){
         L.geoJson(data, {
             style: function(feature) {
                 return car;
@@ -30,6 +22,12 @@
         }).addTo(lines);});
         lines.addTo(map)
         fitBounds()
+        // L.marker([Gröna Huset], {icon: hostelIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11</h1><p>Hus</p>").addTo(map);
+        // L.marker([Thunder Bay], {icon: hostelIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11</h1><p>Hus</p>").addTo(map);
+        // L.marker([Sault Ste Marie], {icon: hostelIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11</h1><p>Hus</p>").addTo(map);
+        // L.marker([Windsor], {icon: hostelIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11</h1><p>Hus</p>").addTo(map);
+        // L.marker([Madison], {icon: hostelIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11</h1><p>Hus</p>").addTo(map);
+
     </script>
 </body>
 </html>
