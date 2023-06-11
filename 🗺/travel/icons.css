@@ -1,0 +1,45 @@
+.schoolIcon {
+    filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%); 
+}
+
+.hotelIcon {
+    filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%); 
+}
+
+.houseIcon {
+    filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%); 
+}
+
+.campsiteIcon {
+    filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%); 
+}
+
+.airportIcon {
+    filter: invert(21%) sepia(44%) saturate(1444%) hue-rotate(149deg) brightness(93%) contrast(101%);
+}
+
+.trainIcon {
+    filter: invert(9%) sepia(96%) saturate(4917%) hue-rotate(346deg) brightness(98%) contrast(99%);
+}
+
+.busIcon {
+    filter: invert(32%) sepia(15%) saturate(6336%) hue-rotate(350deg) brightness(96%) contrast(86%);
+}
+
+.boatIcon {
+    filter: invert(19%) sepia(9%) saturate(2665%) hue-rotate(260deg) brightness(102%) contrast(92%);
+}
+
+[class*="Icon"] {
+    --stroke-pos: 1px;
+    --stroke-neg: -1px;
+    --stroke-color: rgb(255, 255, 255);
+    filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) 
+        drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
+        drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color))
+        drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color))
+        drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) 
+        drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color))
+        drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
+        drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));  
+} 
