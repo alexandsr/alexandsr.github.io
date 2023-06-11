@@ -87,59 +87,17 @@ var baseIcon = L.Icon.extend({
         }
 });
 
+
+
+
 var schoolIcon = new baseIcon({iconUrl: 'travel/images/school_building.png', className: 'schoolIcon'}),
     hotelIcon = new baseIcon({iconUrl: 'travel/images/hotel_bed.png', className: 'hotelIcon'}),
     airportIcon = new baseIcon({iconUrl: 'travel/images/airport.png', className: 'airportIcon'}),
-
-var campsiteIcon = L.icon({
-    iconUrl: 'travel/images/tent_camp.png',
-    shadowUrl: '',
-    iconSize:     [26, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
-});
-
-var houseIcon = L.icon({
-    iconUrl: 'travel/images/house.png',
-    shadowUrl: '',
-    iconSize:     [26, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
-});
-
-var trainIcon = L.icon({
-    iconUrl: 'travel/images/train_station.png',
-    shadowUrl: '',
-    iconSize:     [26, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
-});
-
-var busIcon = L.icon({
-    iconUrl: 'travel/images/bus_stop.png',
-    shadowUrl: '',
-    iconSize:     [26, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
-});
-
-var boatIcon = L.icon({
-    iconUrl: 'travel/images/boat_dock.png',
-    shadowUrl: '',
-    iconSize:     [26, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
-});
+    campsiteIcon = new baseIcon({iconUrl: 'travel/images/tent_camp.png', className: 'campsiteIcon'}),
+    houseIcon = new baseIcon({iconUrl: 'travel/images/house.png', className: 'houseIcon'}),
+    trainIcon = new baseIcon({iconUrl: 'travel/images/train_station.png', className: 'trainIcon'}),
+    busIcon = new baseIcon({iconUrl: 'travel/images/bus_stop.png', className: 'busIcon'}),
+    boatIcon = new baseIcon({iconUrl: 'travel/images/boat_dock.png', className: 'boatIcon'})
 
 // Add a base map layer
 L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey=7d8e9f8db9ff49f5a80ad2b62eda4470 ', {
@@ -147,7 +105,6 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 	apikey: '7d8e9f8db9ff49f5a80ad2b62eda4470',
 	maxZoom: 22
 }).addTo(map);
-
 // Fit Bounds
 function fitBounds() {
     var bounds = mapContent.getBounds();
