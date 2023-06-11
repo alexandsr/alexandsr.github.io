@@ -74,7 +74,7 @@ const car = {
 };
 // Initialize the Leaflet map
 const map = L.map('map', { zoomControl: false }).setView([30, 10], 3); 
-var lines = new L.featureGroup
+var mapContent = new L.featureGroup
 
 var schoolIcon = L.icon({
     iconUrl: 'travel/images/school_building.png',
