@@ -28,31 +28,46 @@
         }
     </style>
 </head>
-<body onload="fitBounds()">
+<body>
     <div id="map"></div>
     <script src="travel/constants.js"></script>
     <script>
         // const abiskoParagraf = "Forskarmöten är Sveriges unga akademis sommarforskarskola. Här får man möta yngre, ledande forskare inom olika fält.<br>Forskarmöten anordnas i Abisko, i vacker fjällmiljö."
-        const s23step1 = new L.Geodesic([MSP, AMS], air).addTo(lines);
-        const s23step2 = new L.Geodesic([AMS, ARN], air).addTo(lines);
+        const s23step1 = new L.Geodesic([MSP, AMS], air).addTo(mapContent);
+        const s23step2 = new L.Geodesic([AMS, ARN], air).addTo(mapContent);
+
+        $.getJSON("travel/summer2023/duluth-grandmarais.geojson",function(data){
+            L.geoJson(data, {
+                style: function(feature) { return car; }
+        }).addTo(mapContent);});
+
+        $.getJSON("travel/summer2023/mpls-duluth.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return car; }
+        }).addTo(mapContent);});
+
+        $.getJSON("travel/summer2023/mpls-duluth.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return bus; }
+        }).addTo(mapContent);});
+
         // Saker
         L.marker([59.37578177463682, 17.03763301315459], {icon: schoolIcon}).bindPopup("<span style='font-family: trueno'><h2 style='margin: 0; padding: 0;'><span style='color: #dc0d04'>RAYS*</span> Sommarforskarskola</h2><h4 style='margin: 0; padding: 0'>* For Excellence</h4><p>Fyra Veckor från 16 Juni till 14 Juli av verklig utföring och framställing av forskning ur Europaskolan i Strängnäs.</p><img src='travel/images/strängnäs.png' width='260px' style='padding: 0; margin: 0;'/><h3><a href='https://raysforexcellence.se/' style='color: #dc0d04'>www.raysforexcellence.se</a></h3></span>", {  
             maxWidth: 260
-        }).addTo(map);
+        }).addTo(mapContent);
         
-        // L.marker([68.35461541662688, 18.815882295171267], {icon: schoolIcon}).bindPopup(`<span style='font-family: trueno'><h2 style='margin: 0; padding: 0;'><span style='color: #544595'>Forskarmöten i Abisko</span></h2><p>${abiskoParagraf}</p><img src="travel/images/abisko.jpg" width="260px" style="padding: 0; margin: 0;"/><h3><a href='https://www.sverigesungaakademi.se/2621.html' style='color: #544595'>Sveriges Unga Akademi</a></h3></span>`, {
-        //     maxWidth: 260
-        // }).addTo(map);
+        // Flygplatser (MSP, AMS, ARN)
+        L.marker([44.8848, -93.2223], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>MSP</h1><p>Minneapolis–Saint Paul International Airport</p>").addTo(mapContent);
+        L.marker([52.3105, 4.7683], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>AMS</h1><p>Amsterdam Airport Schiphol</p><i>Koninklijke Luchthaven Schiphol</i>").addTo(mapContent);
+        L.marker([59.6494, 17.9343], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>ARN</h1><p>Stockholm Arlanda Airport</p><i>Stockholm-Arlanda flygplats</i>").addTo(mapContent);
         
-        // Flygplatser
-        L.marker([44.8848, -93.2223], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>MSP</h1><p>Minneapolis–Saint Paul International Airport</p>").addTo(map);
-        L.marker([52.3105, 4.7683], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>AMS</h1><p>Amsterdam Airport Schiphol</p><i>Koninklijke Luchthaven Schiphol</i>").addTo(map);
-        L.marker([59.6494, 17.9343], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>ARN</h1><p>Stockholm Arlanda Airport</p><i>Stockholm-Arlanda flygplats</i>").addTo(map);
+        // Annan Transport
+        L.marker([46.7602, -92.1295], {icon: busIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>ARN</h1><p>Groome Transportation Bushållplats</p><i>Duluth, 12:e Juni</i>").addTo(mapContent);
         
-        // Boenden
-        L.marker([59.4419, 18.0703], {icon: hostelIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11</h1><p>Hus</p>").addTo(map);
+        // Boenden (Park 11, MTKA, Grand Marais)
+        L.marker([44.9085, -93.4870], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>5231 Holiday Road, Minnetonka</h1><p>Startpunkt den 9:e Juni</p>").addTo(mapContent);
+        L.marker([59.4419, 18.0703], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11, Näsby Park</h1><p>Tisdag 13:e Juni -> [x]</p>").addTo(mapContent);
+        L.marker([47.74597650437895, -90.347668823657], {icon: campsiteIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Campsite [x], Grand Marais Campground/h1><p>Fredag 9:e Juni -> Mondag 12:e Juni</p>").addTo(mapContent);
 
-        lines.addTo(map)
+        mapContent.addTo(map)
         fitBounds()
     </script>
 </body>

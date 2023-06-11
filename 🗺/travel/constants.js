@@ -77,7 +77,7 @@ const map = L.map('map', { zoomControl: false }).setView([30, 10], 3);
 var lines = new L.featureGroup
 
 var schoolIcon = L.icon({
-    iconUrl: 'travel/images/byggnad.png',
+    iconUrl: 'travel/images/school_building.png',
     shadowUrl: '',
     iconSize:     [27, 26], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
@@ -86,8 +86,8 @@ var schoolIcon = L.icon({
     popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
 });
 
-var hostelIcon = L.icon({
-    iconUrl: 'travel/images/hostel.png',
+var hotelIcon = L.icon({
+    iconUrl: 'travel/images/hotel_bed.png',
     shadowUrl: '',
     iconSize:     [27, 26], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
@@ -106,6 +106,56 @@ var airportIcon = L.icon({
     popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
 });
 
+var campsiteIcon = L.icon({
+    iconUrl: 'travel/images/tent_camp.png',
+    shadowUrl: '',
+    iconSize:     [26, 26], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+});
+
+var houseIcon = L.icon({
+    iconUrl: 'travel/images/house.png',
+    shadowUrl: '',
+    iconSize:     [26, 26], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+});
+
+var trainIcon = L.icon({
+    iconUrl: 'travel/images/train_station.png',
+    shadowUrl: '',
+    iconSize:     [26, 26], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+});
+
+var busIcon = L.icon({
+    iconUrl: 'travel/images/bus_stop.png',
+    shadowUrl: '',
+    iconSize:     [26, 26], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+});
+
+var boatIcon = L.icon({
+    iconUrl: 'travel/images/boat_dock.png',
+    shadowUrl: '',
+    iconSize:     [26, 26], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+});
+
 // Add a base map layer
 L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey=7d8e9f8db9ff49f5a80ad2b62eda4470 ', {
 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -115,7 +165,7 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 
 // Fit Bounds
 function fitBounds() {
-    var bounds = lines.getBounds();
+    var bounds = mapContent.getBounds();
     map.fitBounds(bounds);
     console.log("Finished Fitting Map Bounds to Map Plots")
 }
