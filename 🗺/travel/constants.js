@@ -76,35 +76,20 @@ const car = {
 const map = L.map('map', { zoomControl: false }).setView([30, 10], 3); 
 var mapContent = new L.featureGroup
 
-var schoolIcon = L.icon({
-    iconUrl: 'travel/images/school_building.png',
-    shadowUrl: '',
-    iconSize:     [27, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+var baseIcon = L.Icon.extend({
+    options: {
+        shadowUrl: '',
+        iconSize:     [26, 26], // size of the icon
+        shadowSize:   [0, 0], // size of the shadow
+        iconAnchor:   [13, 13], // point of the icon which will correspond to marker's location
+        shadowAnchor: [0, 0],  // the same for the shadow
+        popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
+        }
 });
 
-var hotelIcon = L.icon({
-    iconUrl: 'travel/images/hotel_bed.png',
-    shadowUrl: '',
-    iconSize:     [27, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
-});
-
-var airportIcon = L.icon({
-    iconUrl: 'travel/images/airport.png',
-    shadowUrl: '',
-    iconSize:     [26, 26], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [13.5, 13], // point of the icon which will correspond to marker's location
-    shadowAnchor: [0, 0],  // the same for the shadow
-    popupAnchor:  [0, -13] // point from which the popup should open relative to the iconAnchor
-});
+var schoolIcon = new baseIcon({iconUrl: 'travel/images/school_building.png', className: 'schoolIcon'}),
+    hotelIcon = new baseIcon({iconUrl: 'travel/images/hotel_bed.png', className: 'hotelIcon'}),
+    airportIcon = new baseIcon({iconUrl: 'travel/images/airport.png', className: 'airportIcon'}),
 
 var campsiteIcon = L.icon({
     iconUrl: 'travel/images/tent_camp.png',
