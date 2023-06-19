@@ -34,7 +34,8 @@
     --stroke-pos: 1px;
     --stroke-neg: -1px;
     --stroke-color: rgb(255, 255, 255);
-    filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) 
+    filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%)
+        drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) 
         drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
         drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color))
         drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color))

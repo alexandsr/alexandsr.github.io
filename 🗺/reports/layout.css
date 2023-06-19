@@ -1,0 +1,23 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+#mapDisplay {
+    width: 100vw;
+    height: 65vh;
+    position: absolute;
+    background-color: darkslategray;
+    z-index: -1;
+}
+
+#bottomMenu {
+    display: block;
+    position: relative;
+    top: 65vh;
+    
+}
+
+#selectionContainer {
+    position: relative
+}
+
