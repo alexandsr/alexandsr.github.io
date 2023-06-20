@@ -34,8 +34,8 @@
     <script src="travel/constants.js"></script>
     <script>
         // const abiskoParagraf = "Forskarmöten är Sveriges unga akademis sommarforskarskola. Här får man möta yngre, ledande forskare inom olika fält.<br>Forskarmöten anordnas i Abisko, i vacker fjällmiljö."
-        const s23step1 = new L.Geodesic([MSP, AMS], air).addTo(mapContent);
-        const s23step2 = new L.Geodesic([AMS, ARN], air).addTo(mapContent);
+        const s23step1 = new L.Geodesic([MSP, AMS], air).bindPopup("Flights to/from Amsterdam").addTo(mapContent);
+        const s23step2 = new L.Geodesic([AMS, ARN], air).bindPopup("Flights to/from Stockholm").addTo(mapContent);
 
         $.getJSON("travel/summer2023/duluth-grandmarais.geojson",function(data){
             L.geoJson(data, {
@@ -44,11 +44,11 @@
 
         $.getJSON("travel/summer2023/mpls-duluth.geojson",function(data){
             L.geoJson(data, { style: function(feature) { return car; }
-        }).addTo(mapContent);});
+        }).bindPopup("Car Journey to ").addTo(mapContent);});
 
         $.getJSON("travel/summer2023/mpls-duluth.geojson",function(data){
             L.geoJson(data, { style: function(feature) { return bus; }
-        }).addTo(mapContent);});
+        }).bindPopup("").addTo(mapContent);});
 
         // Saker
         L.marker([59.37578177463682, 17.03763301315459], {icon: schoolIcon}).bindPopup("<span style='font-family: trueno'><h2 style='margin: 0; padding: 0;'><span style='color: #dc0d04'>RAYS*</span> Sommarforskarskola</h2><h4 style='margin: 0; padding: 0'>* For Excellence</h4><p>Fyra Veckor från 16 Juni till 14 Juli av verklig utföring och framställing av forskning ur Europaskolan i Strängnäs.</p><img src='travel/images/strängnäs.png' width='260px' style='padding: 0; margin: 0;'/><h3><a href='https://raysforexcellence.se/' style='color: #dc0d04'>www.raysforexcellence.se</a></h3></span>", {  

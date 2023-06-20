@@ -11,6 +11,7 @@ body, html {
 }
 
 #bottomMenu {
+    align-items: bottom;
     display: block;
     position: relative;
     top: 65vh;
