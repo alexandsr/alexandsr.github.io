@@ -19,6 +19,9 @@
             position: absolute; left: 0; bottom: 0; z-index: 10;
             transition: 0.5s ease;
         }
+        body {
+            transition: background 1s ease;
+        }
 
         /* Desktop-Specific Styles (Mobile First!) */
         @media (min-width: 768px) {
@@ -64,13 +67,22 @@
             </div>     
         </div>
      </div>
-     
-     <!-- Language Change SVG -->
-     <a href="index_se.html"><img 
-        class="langButton"
-        src="flag/se.svg"
-        alt="Change Language"
-        ></a>
     <img src="assets/squeegee.png" id="squeegee">
+    <script>
+        const body = document.body; 
+        window.onscroll = function (event) {
+            const scroll = window.pageYOffset;
+            const screen = window.innerHeight;
+            if (scroll <= 0) {
+                body.style.background = 'linear-gradient(-45deg, #06283D, #256D85);'
+                body.style.animation = 'gradient 50s ease infinite;'
+            } else if (scroll > 1 ) {
+                body.style.background = 'none'
+                body.style.animation = 'none'
+                body.style.backgroundColor = '#182434'
+            }
+        }
+    
+    </script>
  </body>
 </html>

@@ -71,7 +71,6 @@
 body {
     background: linear-gradient(-45deg, #06283D, #256D85);
     background-size: 400% 400%;
-    background-image: url(noise.svg) repeat;
     background-repeat: repeat;
     animation: gradient 50s ease infinite;
     height: 100vh;
