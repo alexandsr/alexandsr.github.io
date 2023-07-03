@@ -1,0 +1,159 @@
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>alexander weimer</title>
+    <style>
+@font-face {
+    font-family: Trueno;
+    src: url(font/trueno_round_bold.otf);
+    font-weight: bold;
+  
+  }  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }  @keyframes animation {
+      0% ,
+      100% {
+          clip-path: polygon(
+              0% 45%,
+              16% 44%,
+              33% 50%,
+              54% 60%,
+              70% 61%,
+              84% 59%,
+              100% 52%,
+              100% 100%,
+              0% 100%
+          );
+      }
+      50% {
+          clip-path: polygon(
+              0% 60%,
+              15% 65%,
+              34% 66%,
+              51% 62%,
+              67% 50%,
+              84% 45%,
+              100% 46%,
+              100% 100%,
+              0% 100%
+          );
+      }
+  }
+    body {
+      background: linear-gradient(-45deg, #06283D, #256D85);
+      background-size: 400% 400%;
+      background-repeat: repeat;
+      animation: gradient 50s ease infinite;
+      height: 100vh;
+      text-align: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Trueno;
+  }
+  
+  
+  /* Text + Link Styling */        
+  .content { font-size: 52px; transition: 0.5s ease-in-out }
+  
+  .content w:nth-child(1) { z-index: 9; color: transparent; position: absolute; -webkit-text-stroke: 1px azure; transition: 0.5s ease-in-out  }
+  
+  .content w:nth-child(2) { color: azure; animation: animation 6s ease-in-out infinite; transition: 0.5s ease-in-out }
+  
+  a { text-decoration:none; color: inherit;  cursor: pointer; }
+  .icon {
+    stroke: azure;
+        width: 23px;
+        margin-right: 10px;
+        filter: invert(91%) sepia(3%) saturate(2471%) hue-rotate(177deg) brightness(115%) contrast(101%);
+      }
+  /* Wave Footer Style Info */
+  .footer {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+  }
+  .button {
+    color: azure;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90vw;
+    text-align: left;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+        .name { text-align: center; color: #E7F6F2; font-size: 40px; position: relative; top: 5%; cursor: default;  transition: ease-in-out 5s;           } 
+        .row { position: absolute; top: 30%; width: 100%; }
+        .content w:nth-child(1):hover {  letter-spacing: 0.4rem;  cursor: pointer;}
+        .content w:nth-child(1):hover ~ w:nth-child(2)  {  letter-spacing: 0.4rem; cursor: pointer; }
+        h1 {
+            cursor: pointer;
+            transition: ease-in-out 3s;
+        }
+        #squeegee {
+            width: 100vw; height: 0vh;
+            position: absolute; left: 0; bottom: 0; z-index: 10;
+            transition: 0.5s ease;
+        }
+        @media (min-width: 768px) {
+            .row { top: 30% }
+                }
+        .subtitle {
+            font-size: 15px;
+            color: #E7F6F2;
+        }
+        .verticalFiller {
+        }
+        </style>
+ </head>
+ <body>
+     <!-- Wave Footer -->
+     <img
+        class="footer"
+        src="assets/wave_short.svg"
+        alt="wave graphic"
+        width=100% 
+    />    
+     <br>
+     
+    <!-- Links -->
+    <div class="content" >  
+        <div class = "row">
+            <div class="column l">
+                <w class = "wavy"><a>alexander</a></w>
+                <w class = "wavy"><a>alexander</a></w>
+            </div>        
+            <!-- <div class="column c">
+                <w class = "wavy"><a>akira</a></w>
+                <w class = "wavy"><a>akira</a></w>      
+            </div> -->
+            <div class="column r">
+                <w class = "wavy"><a>weimer</a></w>
+                <w class = "wavy"><a>weimer</a></w>
+            </div>     
+            <p class="subtitle" id="subt">Banana</p>
+            <p class="subtitle" id="subsubt">🖈Antarctica</p>
+            <div class="button" id="phone"><img class="icon" src="assets/phone-icon.svg">
+                <a href="tel:+16127430320">+1 (612) 743-0320</a></div>
+            <div class="button" id="email"><img class="icon" src="assets/email-icon.svg">
+                <a href="mailto:alexskypie@gmail.com">alexskypie@gmail.com</a>
+            </div>
+            </div>
+            </div>
+        </div>
+     </div>
+    <img src="assets/squeegee.png" id="squeegee">
+ </body>
+</html>
