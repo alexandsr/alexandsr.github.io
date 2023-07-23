@@ -98,6 +98,7 @@ var schoolIcon = new baseIcon({iconUrl: 'travel/images/school_building.png', cla
     trainIcon = new baseIcon({iconUrl: 'travel/images/train_station.png', className: 'trainIcon'}),
     busIcon = new baseIcon({iconUrl: 'travel/images/bus_stop.png', className: 'busIcon'}),
     boatIcon = new baseIcon({iconUrl: 'travel/images/boat_dock.png', className: 'boatIcon'})
+    beachIcon = new baseIcon({iconUrl: 'travel/images/beach.png', className: 'beachIcon'})
 
 // Add a base map layer
 L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey=7d8e9f8db9ff49f5a80ad2b62eda4470 ', {

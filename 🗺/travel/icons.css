@@ -29,6 +29,11 @@
 .boatIcon {
     filter: invert(19%) sepia(9%) saturate(2665%) hue-rotate(260deg) brightness(102%) contrast(92%);
 }
+.beachIcon {
+    filter: invert(19%) sepia(9%) saturate(2665%) hue-rotate(260deg) brightness(102%) contrast(92%);
+}
+
+
 
 [class*="Icon"] {
     --stroke-pos: 1px;
