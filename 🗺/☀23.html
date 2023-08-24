@@ -49,6 +49,30 @@
         $.getJSON("travel/summer2023/mpls-duluth.geojson",function(data){
             L.geoJson(data, { style: function(feature) { return bus; }
         }).bindPopup("<span style='font-family: trueno'><h1>Buss från Duluth till MSP</h1><p>Mondag 12 Juni</p></span>").addTo(mapContent);});
+        
+        $.getJSON("travel/summer2023/östra-sverige.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return car; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Bilsemester genom östra Sverige.</h1><p>Fredag 21 Juli - Söndag 23 Juli</p></span>").addTo(mapContent);});
+
+        $.getJSON("travel/summer2023/falun.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return car; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Vika</h1><p>Fredag 18 Augusti - Lördag 19 Augusti</p></span>").addTo(mapContent);});
+
+        $.getJSON("travel/summer2023/hedemora.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return train; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Vika</h1><p>Fredag 18 Augusti - Lördag 19 Augusti</p></span>").addTo(mapContent);});
+
+        $.getJSON("travel/summer2023/rödlöga.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return boat; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Rödlöga</h1><p>Söndag 20 Augusti</p></span>").addTo(mapContent);});
+        
+        $.getJSON("travel/summer2023/vaxholm.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return bus; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Rödlöga</h1><p>Söndag 20 Augusti</p></span>").addTo(mapContent);});
+
+        $.getJSON("travel/summer2023/strängnäs.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return train; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Rays Mentorskapsveckan</h1><p>26 Juni -> 16 Juli</p></span>").addTo(mapContent);});
 
         // Skolor
         L.marker([59.37578177463682, 17.03763301315459], {icon: schoolIcon}).bindPopup("<span style='font-family: trueno'><h2 style='margin: 0; padding: 0;'><span style='color: #dc0d04'>Rays*</span> Sommarforskarskola</h2><h4 style='margin: 0; padding: 0'>* For Excellence</h4><p>Fyra Veckor från 16 Juni till 14 Juli av verklig utföring och framställing av forskning ur Europaskolan i Strängnäs.</p><img src='travel/images/places/strängnäs.png' width='260px' style='padding: 0; margin: 0;'/><h3><a href='https://raysforexcellence.se/' style='color: #dc0d04'>www.raysforexcellence.se</a></h3></span>", {  
@@ -64,17 +88,25 @@
         L.marker([59.6494, 17.9343], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>ARN</h1><p>Stockholm Arlanda Airport</p><i>Stockholm-Arlanda flygplats</i>").addTo(mapContent);
         
         // Annan Transport
-        L.marker([46.7602, -92.1295], {icon: busIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Busshållplats</h1><p>Groome Transportation</p><i>Duluth, 12:e Juni</i>").addTo(mapContent);
+        L.marker([46.7602, -92.1295], {icon: busIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Busshållplats</h1><p>Groome Transportation</p><i>Duluth, 12 Juni</i>").addTo(mapContent);
         L.marker([59.37042449724896, 17.028171452982825], {icon: trainIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Strängnäs Tågstation</h1><p>Tågstation</p><i>Hemstationen för pendling under min tid på Rays.<br>26 Juni -> 16 Juli</i>").addTo(mapContent);
         L.marker([59.33035638280159, 18.05638119565922], {icon: trainIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Stockholm Central</h1><p>Tågstation</p><i>Slutationen för pendling under min tid på Rays.</i>").addTo(mapContent);
 
-        
+            
         // Boenden (Park 11, MTKA, Grand Marais, Gnesta)
         L.marker([44.9085, -93.4870], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>5231 Holiday Road, Minnetonka</h1><p>Startpunkt den 9:e Juni</p>").addTo(mapContent);
-        L.marker([59.4419, 18.0703], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11, Näsby Park</h1><p>Tisdag 13:e Juni -> [x]</p>").addTo(mapContent);
-        L.marker([47.74597650437895, -90.347668823657], {icon: campsiteIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Grand Marais Campground/h1><p>Fredag 9 Juni -> Mondag 12 Juni</p>").addTo(mapContent);
-        L.marker([59.186517267481086, 17.16532244587018], {icon: campsiteIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Marvikarnas Naturreservat/h1><p>Lördag 24 Juni -> Söndag 25 Juni</p>").addTo(mapContent);
+        L.marker([59.4419, 18.0703], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11, Näsby Park</h1><p>Tisdag 13 Juni -> Söndag 18 Juni\nSöndag 16 Juli -> Fredag 21 Juli\nSöndag 23 Juli -> </p>").addTo(mapContent);
+        L.marker([60.499691946200265, 15.790301381395999], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Mattias</h1><p></p>").addTo(mapContent);
 
+        L.marker([47.74597650437895, -90.347668823657], {icon: campsiteIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Grand Marais Campground</h1><p>Fredag 9 Juni -> Mondag 12 Juni</p>").addTo(mapContent);
+        L.marker([59.186517267481086, 17.16532244587018], {icon: campsiteIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Marvikarnas Naturreservat</h1><p>Lördag 24 Juni -> Söndag 25 Juni</p>").addTo(mapContent);
+
+        L.marker([58.546658168308, 15.004078255891896], {icon: beachIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Varamobaden, Motala</h1><p>Fredag 21 Juli</p><img src='travel/images/places/motala.png'></span>").addTo(mapContent);
+        L.marker([56.01857038511105, 14.606012563424239], {icon: beachIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>, Blekinge</h1><p>Lördag 22 Juli</p></span>").addTo(mapContent);
+        L.marker([56.72518977639978, 16.510568552130806], {icon: beachIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Prästviksbadet, Öland</h1><p>Lördag 22 Juli</p></span>").addTo(mapContent);
+        L.marker([59.59255372129164, 19.17734509921106], {icon: beachIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Badklipporna, Rödlöga</h1><p>Söndag 20 Augusti</p></span>").addTo(mapContent);
+
+  
         mapContent.addTo(map)
         fitBounds()
     </script>
