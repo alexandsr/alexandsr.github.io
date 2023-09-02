@@ -36,6 +36,10 @@
         // const abiskoParagraf = "Forskarmöten är Sveriges unga akademis sommarforskarskola. Här får man möta yngre, ledande forskare inom olika fält.<br>Forskarmöten anordnas i Abisko, i vacker fjällmiljö."
         const s23step1 = new L.Geodesic([MSP, AMS], air).bindPopup("<span style='font-family: trueno'><h1>Flyg till/från Amsterdam</h1><p>Tisdag 13 Juni</p></span>").addTo(mapContent);
         const s23step2 = new L.Geodesic([AMS, ARN], air).bindPopup("<span style='font-family: trueno'><h1>Flyg till/från Stockholm</h1><p>Mondag 12 Juni</p></span>").addTo(mapContent);
+        const italiaStep1 = new L.Geodesic([ARN, MUC], air).bindPopup("<span style='font-family: trueno'><h1>Flyg till München</h1><p>Söndag 30 Juli</p></span>").addTo(mapContent);
+        const italiaStep2 = new L.Geodesic([MUC, BLQ], air).bindPopup("<span style='font-family: trueno'><h1>Flyg till Bologna</h1><p>Söndag 30 Juli</p></span>").addTo(mapContent);
+        const italiaStep3 = new L.Geodesic([BLQ, ZRH], air).bindPopup("<span style='font-family: trueno'><h1>Flyg till Zürich</h1><p>Söndag 6 Augusti</p></span>").addTo(mapContent);
+        const italiaStep4 = new L.Geodesic([ZRH, ARN], air).bindPopup("<span style='font-family: trueno'><h1>Flyg till Stockholm</h1><p>Söndag 6 Augusti</p></span>").addTo(mapContent);
 
         $.getJSON("travel/summer2023/duluth-grandmarais.geojson",function(data){
             L.geoJson(data, {
@@ -74,6 +78,14 @@
             L.geoJson(data, { style: function(feature) { return train; }
         }).bindPopup("<span style='font-family: trueno'><h1>Rays Mentorskapsveckan</h1><p>26 Juni -> 16 Juli</p></span>").addTo(mapContent);});
 
+        $.getJSON("travel/summer2023/bologna-treviso.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return train; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Tågresa från Bologna till Venedig till Treviso</h1><p>Söndag 30 Juli, Onsdag 2 Augusti, Söndag 6 Augusti</p></span>").addTo(mapContent);});
+
+        $.getJSON("travel/summer2023/zurichhb-zurichfh.geojson",function(data){
+            L.geoJson(data, { style: function(feature) { return train; }
+        }).bindPopup("<span style='font-family: trueno'><h1>Tågresa från Zürich Flygplats till Zürich Stad</h1><p>Söndag 6 Augusti</p></span>").addTo(mapContent);});
+
         // Skolor
         L.marker([59.37578177463682, 17.03763301315459], {icon: schoolIcon}).bindPopup("<span style='font-family: trueno'><h2 style='margin: 0; padding: 0;'><span style='color: #dc0d04'>Rays*</span> Sommarforskarskola</h2><h4 style='margin: 0; padding: 0'>* For Excellence</h4><p>Fyra Veckor från 16 Juni till 14 Juli av verklig utföring och framställing av forskning ur Europaskolan i Strängnäs.</p><img src='travel/images/places/strängnäs.png' width='260px' style='padding: 0; margin: 0;'/><h3><a href='https://raysforexcellence.se/' style='color: #dc0d04'>www.raysforexcellence.se</a></h3></span>", {  
             maxWidth: 260
@@ -86,7 +98,10 @@
         L.marker([44.8848, -93.2223], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>MSP</h1><p>Minneapolis–Saint Paul International Airport</p>").addTo(mapContent);
         L.marker([52.3105, 4.7683], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>AMS</h1><p>Amsterdam Airport Schiphol</p><i>Koninklijke Luchthaven Schiphol</i>").addTo(mapContent);
         L.marker([59.6494, 17.9343], {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>ARN</h1><p>Stockholm Arlanda Airport</p><i>Stockholm-Arlanda flygplats</i>").addTo(mapContent);
-        
+        L.marker(MUC, {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>MUC</h1><p>Munich Airport</p><i>Flughafen München</i>").addTo(mapContent);
+        L.marker(BLQ, {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>BLQ</h1><p>Bologna Guglielmo Marconi Airport</p><i>Aeroporto di Bologna</i>").addTo(mapContent);
+        L.marker(ZRH, {icon: airportIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>ZRH</h1><p>Zürich Airport</p><i>Flughafen Zürich</i>").addTo(mapContent);
+
         // Annan Transport
         L.marker([46.7602, -92.1295], {icon: busIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Busshållplats</h1><p>Groome Transportation</p><i>Duluth, 12 Juni</i>").addTo(mapContent);
         L.marker([59.37042449724896, 17.028171452982825], {icon: trainIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Strängnäs Tågstation</h1><p>Tågstation</p><i>Hemstationen för pendling under min tid på Rays.<br>26 Juni -> 16 Juli</i>").addTo(mapContent);
@@ -97,6 +112,7 @@
         L.marker([44.9085, -93.4870], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>5231 Holiday Road, Minnetonka</h1><p>Startpunkt den 9:e Juni</p>").addTo(mapContent);
         L.marker([59.4419, 18.0703], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Parkvägen 11, Näsby Park</h1><p>Tisdag 13 Juni -> Söndag 18 Juni\nSöndag 16 Juli -> Fredag 21 Juli\nSöndag 23 Juli -> </p>").addTo(mapContent);
         L.marker([60.499691946200265, 15.790301381395999], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Mattias</h1><p></p>").addTo(mapContent);
+        L.marker([45.66499243948961, 12.239962273745212], {icon: houseIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>B&B Hotel Treviso</h1><p>Söndag 30 Juli -> Söndag 6 Augusti\nFrukost 🤤</p>").addTo(mapContent);
 
         L.marker([47.74597650437895, -90.347668823657], {icon: campsiteIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Grand Marais Campground</h1><p>Fredag 9 Juni -> Mondag 12 Juni</p>").addTo(mapContent);
         L.marker([59.186517267481086, 17.16532244587018], {icon: campsiteIcon}).bindPopup("<span style='font-family: trueno'><h1 style='color: #0A202C'>Marvikarnas Naturreservat</h1><p>Lördag 24 Juni -> Söndag 25 Juni</p>").addTo(mapContent);

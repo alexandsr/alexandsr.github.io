@@ -30,11 +30,14 @@
     const AMS = {lat: 52.3105, lng: 4.7683}; // Amsterdam
     const ARN = {lat: 59.6494, lng: 17.9343}; // Stockholm 
     const TFS = {lat: 28.0468, lng: 16.5725}; // Tenerife
+    const MUC = {lat: 48.35505282173698, lng: 11.783049771232731}; // München
+    const BLQ = {lat: 44.5348446677629, lng: 11.28768563178797}; // Bologna
+    const ZRH = {lat: 47.46181742836945, lng: 8.550838338898973}; // Zürich
 
 // Modes
 const air = {
     weight: 4,
-    opacity: 0.9,
+    opacity: 0.45,
     color: '#004854',
 };
 const train = {
